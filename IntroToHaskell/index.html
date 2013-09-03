@@ -182,12 +182,12 @@ div.slide p {
 
 .slide.far-past {
   display: block;
-  margin-left: -2400px;
+  margin-left: -10000px;
 }
 
 .slide.past {
   display: block;
-  margin-left: -1600px;
+  margin-left: -9000px;
 }
 
 .slide.current {
@@ -1288,7 +1288,7 @@ div.slide div.presenter_notes {
             </aside>
             
             <aside class="page_number">
-              1/8
+              1/10
             </aside>
           </footer>
         </div>
@@ -1322,7 +1322,7 @@ div.slide div.presenter_notes {
             </aside>
             
             <aside class="page_number">
-              2/8
+              2/10
             </aside>
           </footer>
         </div>
@@ -1333,10 +1333,27 @@ div.slide div.presenter_notes {
         <div class="slide">
           <div class="inner">
             
-            <header><h1>Loops</h1></header>
+            <header><h1>Sin taxes</h1></header>
             
             
-            <section><p>Just kidding.</p></section>
+            <section><p>Things that do not do what you think they do:</p>
+<ul>
+<li><code>.</code>   function compostion </li>
+<li><code>(</code> <code>)</code>   think order of operations</li>
+<li><code>:</code>   singleton list append (throw an element on the front of a list)</li>
+<li><code>$</code>   used to change the order of exectution</li>
+<li><code>!=</code>  equivalent is <code>\=</code></li>
+<li><code>--</code>  actually a one line comment, like <code>//</code></li>
+<li><code>++</code>  not an incrementer (that wouldn't really make sense anyway)
+        actually list join</li>
+<li><code>%</code>   not used <code>mod</code> is what you want </li>
+</ul>
+<p>Things that do what you'd expect:</p>
+<ul>
+<li>Most math operations: <code>+</code> <code>-</code> <code>*</code> <code>/</code></li>
+<li>Most boolean operators: <code>==</code> <code>&amp;&amp;</code> <code>||</code> <code>&gt;</code> <code>&lt;</code> <code>&lt;=</code> <code>&gt;=</code> </li>
+<li></li>
+</ul></section>
             
           </div>
           <div class="presenter_notes">
@@ -1352,7 +1369,44 @@ div.slide div.presenter_notes {
             </aside>
             
             <aside class="page_number">
-              3/8
+              3/10
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: slides.md -->
+      <div class="slide-wrapper">
+        <div class="slide">
+          <div class="inner">
+            
+            <header><h1>Syntax you've been gone</h1></header>
+            
+            
+            <section><p>Handy things in haskell</p>
+<ul>
+<li><code>--</code> one line comment</li>
+<li><code>(</code> <code>)</code> think math order of operations , not argument holders</li>
+<li><code>:</code> singleton append, that is, if you have some list <code>xs</code> and some element 
+    <code>x</code>, <code>x:xs</code> adds <code>x</code> to the front of <code>xs</code></li>
+<li><code>++</code> - joins a list</li>
+</ul></section>
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="slides.md">slides.md</a>
+            </aside>
+            
+            <aside class="page_number">
+              4/10
             </aside>
           </footer>
         </div>
@@ -1368,18 +1422,22 @@ div.slide div.presenter_notes {
             
             <section><h2>(Type signatures and declaration)</h2>
 <p>in Java:</p>
-<div class="highlight"><pre><span class="lineno">1</span> <span class="kt">int</span> <span class="nf">fname</span><span class="o">(</span> <span class="kt">int</span> <span class="n">x</span><span class="o">,</span> <span class="kt">int</span> <span class="n">y</span><span class="o">){</span>
-<span class="lineno">2</span>     <span class="o">...</span>
-<span class="lineno">3</span>     <span class="n">method</span> <span class="n">definition</span>
+<div class="highlight"><pre><span class="lineno">1</span> <span class="n">String</span> <span class="n">str</span><span class="o">;</span>
+<span class="lineno">2</span> 
+<span class="lineno">3</span> <span class="kt">char</span> <span class="nf">fname</span><span class="o">(</span><span class="kt">int</span> <span class="n">x</span><span class="o">){</span>
 <span class="lineno">4</span>     <span class="o">...</span>
-<span class="lineno">5</span>     <span class="k">return</span> <span class="n">result</span><span class="o">;</span>
-<span class="lineno">6</span> <span class="o">}</span>
+<span class="lineno">5</span>     <span class="n">method</span> <span class="n">definition</span>
+<span class="lineno">6</span>     <span class="o">...</span>
+<span class="lineno">7</span>     <span class="k">return</span> <span class="n">result</span><span class="o">;</span>
+<span class="lineno">8</span> <span class="o">}</span>
 </pre></div>
 
 <p>in Haskell:</p>
-<div class="highlight"><pre><span class="lineno">1</span> <span class="nf">fname</span> <span class="ow">::</span> <span class="n">int</span> <span class="ow">-&gt;</span> <span class="n">int</span> <span class="ow">-&gt;</span> <span class="n">int</span>
-<span class="lineno">2</span> 
-<span class="lineno">3</span> <span class="nf">fname</span> <span class="n">x</span> <span class="n">y</span> <span class="ow">=</span> <span class="o">...</span> <span class="n">function</span> <span class="n">definition</span> <span class="o">...</span>
+<div class="highlight"><pre><span class="lineno">1</span> <span class="nf">str</span> <span class="ow">::</span> <span class="kt">String</span>
+<span class="lineno">2</span> <span class="nf">str</span> <span class="ow">=</span> <span class="s">&quot;&quot;</span>
+<span class="lineno">3</span> 
+<span class="lineno">4</span> <span class="nf">fname</span> <span class="ow">::</span> <span class="kt">Int</span> <span class="ow">-&gt;</span> <span class="kt">Char</span> 
+<span class="lineno">5</span> <span class="nf">fname</span> <span class="n">x</span> <span class="ow">=</span> <span class="o">...</span> <span class="n">function</span> <span class="n">definition</span> <span class="o">...</span>
 </pre></div>
 </section>
             
@@ -1397,7 +1455,75 @@ div.slide div.presenter_notes {
             </aside>
             
             <aside class="page_number">
-              4/8
+              5/10
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: slides.md -->
+      <div class="slide-wrapper">
+        <div class="slide">
+          <div class="inner">
+            
+            <header><h1>Loops!</h1></header>
+            
+            
+            <section><p>Just kidding</p></section>
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="slides.md">slides.md</a>
+            </aside>
+            
+            <aside class="page_number">
+              6/10
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: slides.md -->
+      <div class="slide-wrapper">
+        <div class="slide has_code">
+          <div class="inner">
+            
+            <header><h1>Maps!</h1></header>
+            
+            
+            <section><p>Just cartography</p>
+<p>Apply a given function to every element of a list. </p>
+<p>in Java:
+    !java</p>
+<div class="highlight"><pre><span class="lineno">1</span> <span class="nf">func</span> <span class="ow">=</span> <span class="c1">-- whatever this does</span>
+<span class="lineno">2</span> 
+<span class="lineno">3</span> <span class="nf">map</span> <span class="n">func</span> <span class="n">list</span>
+</pre></div>
+</section>
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="slides.md">slides.md</a>
+            </aside>
+            
+            <aside class="page_number">
+              7/10
             </aside>
           </footer>
         </div>
@@ -1414,7 +1540,7 @@ div.slide div.presenter_notes {
             <section><p>So suppose you have a list (or array) and you want to remove the elements that 
 fail a condition.</p>
 <p>in Java:</p>
-<div class="highlight"><pre><span class="lineno">1</span> <span class="kd">public</span> <span class="n">ArrayList</span><span class="o">&lt;</span><span class="n">Integer</span><span class="o">&gt;</span> <span class="nf">filter</span><span class="o">(</span><span class="n">ArrayList</span><span class="o">&lt;</span><span class="n">Integer</span><span class="o">&gt;</span> <span class="n">list</span><span class="o">){</span>
+<div class="highlight"><pre><span class="lineno">1</span> <span class="n">ArrayList</span><span class="o">&lt;</span><span class="n">Integer</span><span class="o">&gt;</span> <span class="nf">filter</span><span class="o">(</span><span class="n">ArrayList</span><span class="o">&lt;</span><span class="n">Integer</span><span class="o">&gt;</span> <span class="n">list</span><span class="o">){</span>
 <span class="lineno">2</span>     <span class="n">ArrayList</span><span class="o">&lt;</span><span class="n">Integer</span><span class="o">&gt;</span> <span class="n">result</span> <span class="o">=</span> <span class="k">new</span> <span class="n">ArrayList</span><span class="o">&lt;</span><span class="n">Integer</span><span class="o">&gt;();</span>
 <span class="lineno">3</span>     <span class="k">for</span><span class="o">(</span> <span class="kt">int</span> <span class="n">a</span> <span class="o">:</span> <span class="n">list</span><span class="o">)</span>
 <span class="lineno">4</span>         <span class="k">if</span><span class="o">(</span> <span class="n">test</span><span class="o">(</span><span class="n">a</span><span class="o">)</span> <span class="o">==</span> <span class="n">True</span><span class="o">)</span>
@@ -1431,6 +1557,7 @@ fail a condition.</p>
 <span class="lineno">5</span>     <span class="o">|</span> <span class="n">test</span> <span class="n">x</span>    <span class="ow">=</span> <span class="n">x</span> <span class="kt">:</span> <span class="n">filter</span> <span class="n">test</span> <span class="n">xs</span>
 <span class="lineno">6</span>     <span class="o">|</span> <span class="n">otherwise</span> <span class="ow">=</span> <span class="n">filter</span> <span class="n">test</span> <span class="n">xs</span>
 </pre></div>
+
 </section>
             
           </div>
@@ -1438,30 +1565,9 @@ fail a condition.</p>
             <header><h1>Presenter Notes</h1></header>
             <section>
             
-            </section>
-          </div>
-          <footer>
-            
-            <aside class="source">
-              Source: <a href="slides.md">slides.md</a>
-            </aside>
-            
-            <aside class="page_number">
-              5/8
-            </aside>
-          </footer>
-        </div>
-      </div>
-      
-      <!-- slide source: slides.md -->
-      <div class="slide-wrapper">
-        <div class="slide has_code">
-          <div class="inner">
-            
-            <header><h1>Folding, at home!</h1></header>
-            
-            
-            <section><p>Find the sum of the numbers from 1 to some number <code>n</code>. </p>
+              <h2>this is the actual implementation of filter in haskell</h2>
+<h1>Folding, at home!</h1>
+<p>Find the sum of the numbers from 1 to some number <code>n</code>. </p>
 <p>in Java:</p>
 <div class="highlight"><pre><span class="lineno">1</span> <span class="kd">public</span> <span class="kt">int</span> <span class="nf">factorial</span><span class="o">(</span><span class="kt">int</span> <span class="n">n</span><span class="o">){</span>
 <span class="lineno">2</span>     <span class="kt">int</span> <span class="n">sum</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span>
@@ -1479,12 +1585,6 @@ fail a condition.</p>
 <span class="lineno">4</span>         <span class="nb">sum</span> <span class="o">+=</span> <span class="n">n</span>
 <span class="lineno">5</span>     <span class="k">return</span> <span class="nb">sum</span>
 </pre></div>
-</section>
-            
-          </div>
-          <div class="presenter_notes">
-            <header><h1>Presenter Notes</h1></header>
-            <section>
             
             </section>
           </div>
@@ -1495,7 +1595,7 @@ fail a condition.</p>
             </aside>
             
             <aside class="page_number">
-              6/8
+              8/10
             </aside>
           </footer>
         </div>
@@ -1528,7 +1628,7 @@ fail a condition.</p>
             </aside>
             
             <aside class="page_number">
-              7/8
+              9/10
             </aside>
           </footer>
         </div>
@@ -1550,7 +1650,7 @@ fail a condition.</p>
           <footer>
             
             <aside class="page_number">
-              /8
+              /10
             </aside>
           </footer>
         </div>
@@ -1587,7 +1687,7 @@ fail a condition.</p>
             </aside>
             
             <aside class="page_number">
-              8/8
+              10/10
             </aside>
           </footer>
         </div>
@@ -1614,38 +1714,50 @@ fail a condition.</p>
       
       
       <tr id="toc-row-3">
-        <th><a href="#slide3">Loops</a></th>
+        <th><a href="#slide3">Sin taxes</a></th>
         <td><a href="#slide3">3</a></td>
       </tr>
       
       
       <tr id="toc-row-4">
-        <th><a href="#slide4">Just not your type</a></th>
+        <th><a href="#slide4">Syntax you've been gone</a></th>
         <td><a href="#slide4">4</a></td>
       </tr>
       
       
       <tr id="toc-row-5">
-        <th><a href="#slide5">I need a filter</a></th>
+        <th><a href="#slide5">Just not your type</a></th>
         <td><a href="#slide5">5</a></td>
       </tr>
       
       
       <tr id="toc-row-6">
-        <th><a href="#slide6">Folding, at home!</a></th>
+        <th><a href="#slide6">Loops!</a></th>
         <td><a href="#slide6">6</a></td>
       </tr>
       
       
       <tr id="toc-row-7">
-        <th><a href="#slide7">Folding, at home!</a></th>
+        <th><a href="#slide7">Maps!</a></th>
         <td><a href="#slide7">7</a></td>
       </tr>
       
       
       <tr id="toc-row-8">
-        <th><a href="#slide8">Resources</a></th>
+        <th><a href="#slide8">I need a filter</a></th>
         <td><a href="#slide8">8</a></td>
+      </tr>
+      
+      
+      <tr id="toc-row-9">
+        <th><a href="#slide9">Folding, at home!</a></th>
+        <td><a href="#slide9">9</a></td>
+      </tr>
+      
+      
+      <tr id="toc-row-10">
+        <th><a href="#slide10">Resources</a></th>
+        <td><a href="#slide10">10</a></td>
       </tr>
       
       

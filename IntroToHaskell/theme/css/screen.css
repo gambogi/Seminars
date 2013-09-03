@@ -54,12 +54,12 @@ div.slide p {
 
 .slide.far-past {
   display: block;
-  margin-left: -2400px;
+  margin-left: -10000px;
 }
 
 .slide.past {
   display: block;
-  margin-left: -1600px;
+  margin-left: -9000px;
 }
 
 .slide.current {

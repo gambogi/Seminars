@@ -1,4 +1,4 @@
-# Intro to Haskell
+# Intro to Haskell 
 ---
 
 # Haskell, writ bulleted
@@ -9,9 +9,35 @@
 
 ---
 
-# Loops
+# Sin taxes
 
-Just kidding.
+Things that do not do what you think they do:
+
+- `.`   function compostion 
+- `(` `)`   think order of operations
+- `:`   singleton list append (throw an element on the front of a list)
+- `$`   used to change the order of exectution
+- `!=`  equivalent is `\=`
+- `--`  actually a one line comment, like `//`
+- `++`  not an incrementer (that wouldn't really make sense anyway)
+        actually list join
+- `%`   not used `mod` is what you want 
+
+Things that do what you'd expect:
+
+- Most math operations: `+` `-` `*` `/`
+- Most boolean operators: `==` `&&` `||` `>` `<` `<=` `>=` 
+- 
+---
+
+# Syntax you've been gone
+Handy things in haskell
+
+- `--` one line comment
+- `(` `)` think math order of operations , not argument holders
+- `:` singleton append, that is, if you have some list `xs` and some element 
+    `x`, `x:xs` adds `x` to the front of `xs`
+- `++` - joins a list
 
 ---
 
@@ -21,7 +47,10 @@ Just kidding.
 in Java:
 
     !java
-    int fname( int x, int y){
+
+    String str;
+
+    char fname(int x){
         ...
         method definition
         ...
@@ -31,9 +60,47 @@ in Java:
 in Haskell:
 
     !haskell
-    fname :: int -> int -> int
+
+    str :: String
+    str = ""
+
+    fname :: Int -> Char 
+    fname x = ... function definition ...
+
+---
+
+# Loops! 
+
+Just kidding
+
+---
+
+# Maps! 
+Just cartography
+
+Apply a given function to every element of a list. 
+
+in Java:
+    !java
+
+    E func(E arg){
+     // what your function does
+     return arg;
+    }
+
+    ArrayList<E> map(ArrayList<E> list){
+        for( E elem : list)
+             func(elem);
+        return list;
+    }
+
+in Haskell:
     
-    fname x y = ... function definition ...
+    !haskell
+
+    func = -- whatever this does
+
+    map func list
 
 ---
 
@@ -45,7 +112,7 @@ fail a condition.
 in Java:
 
     !java
-    public ArrayList<Integer> filter(ArrayList<Integer> list){
+    ArrayList<Integer> filter(ArrayList<Integer> list){
         ArrayList<Integer> result = new ArrayList<Integer>();
         for( int a : list)
             if( test(a) == True)
@@ -63,7 +130,9 @@ in Haskell:
         | test x    = x : filter test xs
         | otherwise = filter test xs
 
+##Presenter Notes
 
+this is the actual implementation of filter in haskell
 ---
 
 # Folding, at home!
