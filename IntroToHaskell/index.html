@@ -1288,7 +1288,40 @@ div.slide div.presenter_notes {
             </aside>
             
             <aside class="page_number">
-              1/10
+              1/12
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: slides.md -->
+      <div class="slide-wrapper">
+        <div class="slide">
+          <div class="inner">
+            
+            <header><h1>What are functional programming languages?</h1></header>
+            
+            
+            <section><ul>
+<li>Stateless</li>
+<li>No side effects</li>
+</ul></section>
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="slides.md">slides.md</a>
+            </aside>
+            
+            <aside class="page_number">
+              2/12
             </aside>
           </footer>
         </div>
@@ -1322,7 +1355,7 @@ div.slide div.presenter_notes {
             </aside>
             
             <aside class="page_number">
-              2/10
+              3/12
             </aside>
           </footer>
         </div>
@@ -1340,7 +1373,7 @@ div.slide div.presenter_notes {
 <ul>
 <li><code>.</code>   function compostion </li>
 <li><code>(</code> <code>)</code>   think order of operations</li>
-<li><code>:</code>   singleton list append (throw an element on the front of a list)</li>
+<li><code>:</code>   singleton list prepend (throw an element on the front of a list)</li>
 <li><code>$</code>   used to change the order of exectution</li>
 <li><code>!=</code>  equivalent is <code>\=</code></li>
 <li><code>--</code>  actually a one line comment, like <code>//</code></li>
@@ -1369,7 +1402,7 @@ div.slide div.presenter_notes {
             </aside>
             
             <aside class="page_number">
-              3/10
+              4/12
             </aside>
           </footer>
         </div>
@@ -1406,7 +1439,7 @@ div.slide div.presenter_notes {
             </aside>
             
             <aside class="page_number">
-              4/10
+              5/12
             </aside>
           </footer>
         </div>
@@ -1455,7 +1488,7 @@ div.slide div.presenter_notes {
             </aside>
             
             <aside class="page_number">
-              5/10
+              6/12
             </aside>
           </footer>
         </div>
@@ -1485,7 +1518,7 @@ div.slide div.presenter_notes {
             </aside>
             
             <aside class="page_number">
-              6/10
+              7/12
             </aside>
           </footer>
         </div>
@@ -1523,7 +1556,7 @@ div.slide div.presenter_notes {
             </aside>
             
             <aside class="page_number">
-              7/10
+              8/12
             </aside>
           </footer>
         </div>
@@ -1595,7 +1628,7 @@ fail a condition.</p>
             </aside>
             
             <aside class="page_number">
-              8/10
+              9/12
             </aside>
           </footer>
         </div>
@@ -1628,17 +1661,38 @@ fail a condition.</p>
             </aside>
             
             <aside class="page_number">
-              9/10
+              10/12
             </aside>
           </footer>
         </div>
       </div>
       
-      <!-- slide source:  -->
+      <!-- slide source: slides.md -->
       <div class="slide-wrapper">
-        <div class="slide">
+        <div class="slide has_code">
           <div class="inner">
             
+            <header><h1>Lucas!</h1></header>
+            
+            
+            <section><p>Find the number of even lucas numbers below 4,000,000
+Lucas numbers follow the same rules as fibonacci numbers, but have the start
+values of 2 and 1, rather than 0 and 1</p>
+<div class="highlight"><pre><span class="lineno"> 1</span> <span class="c1">-- calculate lucas numbers based on fibonacci numbers</span>
+<span class="lineno"> 2</span> <span class="nf">lucas</span> <span class="ow">::</span> <span class="kt">Integer</span> <span class="ow">-&gt;</span> <span class="kt">Integer</span>
+<span class="lineno"> 3</span> <span class="nf">lucas</span> <span class="n">n</span> <span class="ow">=</span> <span class="n">fib</span> <span class="p">(</span><span class="n">n</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span> <span class="o">+</span> <span class="n">fib</span> <span class="p">(</span><span class="n">n</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span>
+<span class="lineno"> 4</span> 
+<span class="lineno"> 5</span> <span class="c1">-- Using Binet&#39;s formula to find fibonacci numbers</span>
+<span class="lineno"> 6</span> <span class="c1">-- golden ratio</span>
+<span class="lineno"> 7</span> 
+<span class="lineno"> 8</span> <span class="nf">fib</span> <span class="ow">::</span> <span class="kt">Integer</span> <span class="ow">-&gt;</span> <span class="kt">Integer</span>
+<span class="lineno"> 9</span> <span class="nf">fib</span> <span class="n">n</span> <span class="ow">=</span> <span class="n">round</span> <span class="o">$</span> <span class="n">phi</span> <span class="o">**</span> <span class="n">fromIntegral</span> <span class="n">n</span><span class="o">/</span><span class="n">sq5</span>
+<span class="lineno">10</span>     <span class="kr">where</span>
+<span class="lineno">11</span>         <span class="n">sq5</span> <span class="ow">=</span> <span class="n">sqrt</span> <span class="mi">5</span> <span class="ow">::</span> <span class="kt">Double</span>
+<span class="lineno">12</span>         <span class="n">phi</span> <span class="ow">=</span> <span class="p">(</span><span class="mi">1</span><span class="o">+</span> <span class="n">sq5</span><span class="p">)</span> <span class="o">/</span> <span class="mi">2</span>
+<span class="lineno">13</span> <span class="nf">main</span> <span class="ow">=</span> <span class="n">print</span> <span class="o">$</span> <span class="n">length</span> <span class="o">$</span> <span class="n">filter</span> <span class="p">(</span><span class="n">even</span><span class="p">)</span> <span class="o">$</span> <span class="n">takeWhile</span> <span class="p">(</span><span class="o">&lt;</span><span class="mi">4000000</span><span class="p">)</span> <span class="o">$</span> <span class="n">map</span> <span class="n">lucas</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span> <span class="o">..</span><span class="p">]</span>
+</pre></div>
+</section>
             
           </div>
           <div class="presenter_notes">
@@ -1649,8 +1703,12 @@ fail a condition.</p>
           </div>
           <footer>
             
+            <aside class="source">
+              Source: <a href="slides.md">slides.md</a>
+            </aside>
+            
             <aside class="page_number">
-              /10
+              11/12
             </aside>
           </footer>
         </div>
@@ -1669,8 +1727,9 @@ fail a condition.</p>
 <li><a href="http://book.realworldhaskell.org/read/">Real World Haskell</a> - Another good book</li>
 <li><a href="http://book.realworldhaskell.org/read/">Project Euler</a> - Good practice problems, not just for haskell</li>
 <li><a href="http://www.haskell.org/hoogle">Hoogle</a> - search haskell functions by type signature</li>
-<li><a href="http://www.haskell.org">haskell.org</a> - </li>
-<li></li>
+<li><a href="http://www.haskell.org">haskell.org</a> </li>
+<li><a href="http://www.reddit/r/haskell">/r/haskell</a>  </li>
+<li><a href="">#haskell</a></li>
 </ul></section>
             
           </div>
@@ -1687,7 +1746,7 @@ fail a condition.</p>
             </aside>
             
             <aside class="page_number">
-              10/10
+              12/12
             </aside>
           </footer>
         </div>
@@ -1708,56 +1767,68 @@ fail a condition.</p>
       
       
       <tr id="toc-row-2">
-        <th><a href="#slide2">Haskell, writ bulleted</a></th>
+        <th><a href="#slide2">What are functional programming languages?</a></th>
         <td><a href="#slide2">2</a></td>
       </tr>
       
       
       <tr id="toc-row-3">
-        <th><a href="#slide3">Sin taxes</a></th>
+        <th><a href="#slide3">Haskell, writ bulleted</a></th>
         <td><a href="#slide3">3</a></td>
       </tr>
       
       
       <tr id="toc-row-4">
-        <th><a href="#slide4">Syntax you've been gone</a></th>
+        <th><a href="#slide4">Sin taxes</a></th>
         <td><a href="#slide4">4</a></td>
       </tr>
       
       
       <tr id="toc-row-5">
-        <th><a href="#slide5">Just not your type</a></th>
+        <th><a href="#slide5">Syntax you've been gone</a></th>
         <td><a href="#slide5">5</a></td>
       </tr>
       
       
       <tr id="toc-row-6">
-        <th><a href="#slide6">Loops!</a></th>
+        <th><a href="#slide6">Just not your type</a></th>
         <td><a href="#slide6">6</a></td>
       </tr>
       
       
       <tr id="toc-row-7">
-        <th><a href="#slide7">Maps!</a></th>
+        <th><a href="#slide7">Loops!</a></th>
         <td><a href="#slide7">7</a></td>
       </tr>
       
       
       <tr id="toc-row-8">
-        <th><a href="#slide8">I need a filter</a></th>
+        <th><a href="#slide8">Maps!</a></th>
         <td><a href="#slide8">8</a></td>
       </tr>
       
       
       <tr id="toc-row-9">
-        <th><a href="#slide9">Folding, at home!</a></th>
+        <th><a href="#slide9">I need a filter</a></th>
         <td><a href="#slide9">9</a></td>
       </tr>
       
       
       <tr id="toc-row-10">
-        <th><a href="#slide10">Resources</a></th>
+        <th><a href="#slide10">Folding, at home!</a></th>
         <td><a href="#slide10">10</a></td>
+      </tr>
+      
+      
+      <tr id="toc-row-11">
+        <th><a href="#slide11">Lucas!</a></th>
+        <td><a href="#slide11">11</a></td>
+      </tr>
+      
+      
+      <tr id="toc-row-12">
+        <th><a href="#slide12">Resources</a></th>
+        <td><a href="#slide12">12</a></td>
       </tr>
       
       

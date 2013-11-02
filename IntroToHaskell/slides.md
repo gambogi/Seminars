@@ -1,4 +1,12 @@
 # Intro to Haskell 
+
+---
+
+# What are functional programming languages?
+
+- Stateless
+- No side effects
+
 ---
 
 # Haskell, writ bulleted
@@ -15,7 +23,7 @@ Things that do not do what you think they do:
 
 - `.`   function compostion 
 - `(` `)`   think order of operations
-- `:`   singleton list append (throw an element on the front of a list)
+- `:`   singleton list prepend (throw an element on the front of a list)
 - `$`   used to change the order of exectution
 - `!=`  equivalent is `\=`
 - `--`  actually a one line comment, like `//`
@@ -169,9 +177,29 @@ in Haskell:
     factorial n = foldl (+) [1 .. n]
 ---
 
+# Lucas!
 
+Find the number of even lucas numbers below 4,000,000
+Lucas numbers follow the same rules as fibonacci numbers, but have the start
+values of 2 and 1, rather than 0 and 1
+
+    !haskell
+    -- calculate lucas numbers based on fibonacci numbers
+    lucas :: Integer -> Integer
+    lucas n = fib (n - 1) + fib (n + 1)
+
+    -- Using Binet's formula to find fibonacci numbers
+    -- golden ratio
+    
+    fib :: Integer -> Integer
+    fib n = round $ phi ** fromIntegral n/sq5
+        where
+            sq5 = sqrt 5 :: Double
+            phi = (1+ sq5) / 2
+    main = print $ length $ filter (even) $ takeWhile (<4000000) $ map lucas [1,2 ..]
 
 ---
+
 
 # Resources
 
@@ -179,5 +207,6 @@ in Haskell:
 - [Real World Haskell](http://book.realworldhaskell.org/read/) - Another good book
 - [Project Euler](http://book.realworldhaskell.org/read/) - Good practice problems, not just for haskell
 - [Hoogle](http://www.haskell.org/hoogle) - search haskell functions by type signature
-- [haskell.org](http://www.haskell.org) - 
-- 
+- [haskell.org](http://www.haskell.org) 
+- [/r/haskell](http://www.reddit/r/haskell)  
+- [#haskell]()
